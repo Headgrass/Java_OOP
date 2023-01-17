@@ -27,12 +27,12 @@ public class Master {
 
     public Master() {
         this(String.format("Hero_Master #%d", ++Master.number),
-                Master.r.nextInt(100, 200),
-                Master.r.nextInt(50, 150));
+                Master.r.nextInt(),
+                Master.r.nextInt());
     }
 
     public int Work() {
-        int item = Master.r.nextInt(20, 30);
+        int item = Master.r.nextInt();
         this.strong -= (int)(item * 0.8);
         if (strong < 0) return 0;
         else return item;

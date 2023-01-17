@@ -7,13 +7,13 @@ public class Magician extends BaseHero {
 
     public Magician() {
         super(String.format("Hero_Magician #%d", ++Magician.number),
-                Magician.r.nextInt(100, 200));
-        this.maxMana = Magician.r.nextInt(50, 150);
+                Magician.r.nextInt());
+        this.maxMana = Magician.r.nextInt();
         this.mana = maxMana;
     }
 
     public int Attack() {
-        int damage = BaseHero.r.nextInt(20, 30);
+        int damage = BaseHero.r.nextInt();
         this.mana -= (int)(damage * 0.8);
         if (mana < 0) return 0;
         else return damage;

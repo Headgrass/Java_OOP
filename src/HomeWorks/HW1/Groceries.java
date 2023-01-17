@@ -6,7 +6,10 @@ package HomeWorks.HW1;
  * 1.1 Срок годности
  */
 public class Groceries extends BaseProduct{
+
+    public String expirationDate;
     public Groceries(String name, Integer cost, Integer amount, String item, String expirationDate) {
         super(name, cost, amount, item);
+        this.expirationDate = expirationDate;
     }
 }

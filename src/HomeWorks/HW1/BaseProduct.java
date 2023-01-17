@@ -21,6 +21,11 @@ public class BaseProduct {
         this.item = item;
     }
 
+    @Override
+    public String toString() {
+        return System.out.printf("This name product is: %s\n", this.getName()).toString();
+    }
+
     public String getName() {
         return name;
     }

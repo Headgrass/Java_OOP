@@ -1,4 +1,4 @@
-package Lesson_07.Ex006;
+package Lections.Lec1.Ex006;
 
 public class Priest extends BaseHero {
 
@@ -7,13 +7,13 @@ public class Priest extends BaseHero {
 
     public Priest() {
         super(String.format("Hero_Priest #%d", ++Magician.number),
-                Magician.r.nextInt(100, 200));
-        this.maxElixir = Magician.r.nextInt(50, 150);
+                Magician.r.nextInt());
+        this.maxElixir = Magician.r.nextInt();
         this.elixir = maxElixir;
     }
 
     public int Attack() {
-        int damage = BaseHero.r.nextInt(20, 30);
+        int damage = BaseHero.r.nextInt();
         this.elixir -= (int) (damage * 0.8);
         if (elixir < 0)
             return 0;

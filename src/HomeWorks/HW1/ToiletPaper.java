@@ -5,7 +5,9 @@ package HomeWorks.HW1;
  * 10.1 Количество слоёв
  */
 public class ToiletPaper extends BaseProduct{
+    private int numberOfLayers;
     public ToiletPaper(String name, Integer cost, Integer amount, String item, Integer numberOfLayers) {
         super(name, cost, amount, item);
+        this.numberOfLayers = numberOfLayers;
     }
 }
