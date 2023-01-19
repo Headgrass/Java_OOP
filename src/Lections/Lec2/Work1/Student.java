@@ -10,7 +10,7 @@ package Lections.Lec2.Work1;
  *  *   1.5 Учиться,
  *  * выводящие на экран фразы "Я играю" и "Я учусь" соответственно.
  */
-public class Student {
+public abstract class Student {
     private String name;
     private int mark;
     private int classNumber;
@@ -25,8 +25,4 @@ public class Student {
     public abstract void play();
     public abstract void study();
 
-    @Override
-    public String toString() {
-        return String.format();
-    }
 }

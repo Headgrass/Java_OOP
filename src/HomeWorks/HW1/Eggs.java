@@ -4,9 +4,9 @@ package HomeWorks.HW1;
  * 8. Яйца, содержащее следующиее свойство:
  * 8.1 Количество в упаковке
  */
-public class Egg extends Groceries{
+public class Eggs extends Cat_Groceries{
 
-    public Egg(String name, Integer cost, Integer amount, String item, String expirationDate) {
+    public Eggs(String name, Integer cost, Integer amount, String item, String expirationDate) {
         super(name, cost, amount, item, expirationDate);
     }
 
@@ -17,4 +17,6 @@ public class Egg extends Groceries{
                                 "Срок годности: %s", this.getName(), this.getCost(),
                         this.getAmount(), this.getItem(), expirationDate).toString();
     }
+
+
 }
