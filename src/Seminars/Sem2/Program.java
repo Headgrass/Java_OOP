@@ -1,4 +1,4 @@
-package Lections.Lec2.Work1;
+package Seminars.Sem2;
 
 /**
  * Написать следующие классы:
@@ -33,4 +33,33 @@ package Lections.Lec2.Work1;
  * Создать в Main все объекты классов школьников и проверить работу метода, созданного в классе Program
  */
 public class Program {
+    public static void main(String[] args) {
+        Student jun1 = new JuniorStudent("Ivan", 5, 1);
+        Student mid1 = new MiddleStudent("Petr", 4, 7);
+        Student sen1 = new SeniorStudent("Alex", 3, 11);
+
+        Student[] studentList = new Student[]{jun1, mid1, sen1};
+        for (Student student : studentList) {
+            showInfo(student);
+        }
+    }
+
+    private static void showInfo(Student s) {
+        if (s instanceof Player) {
+            ((Player) s).play();
+        }
+        if (s instanceof Smoker) {
+            ((Smoker) s).smoke();
+        }
+        if (s instanceof Extender) {
+            ((Extender) s).toExtendedGroup();
+        }
+        if (s instanceof Examer) {
+            ((Examer) s).passExam("Maths");
+            ((Examer) s).passExam("English");
+        }
+        s.study();
+        System.out.println(s);
+        System.out.println();
+    }
 }

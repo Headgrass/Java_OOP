@@ -1,4 +1,4 @@
-package Lections.Lec2.Work1;
+package Seminars.Sem2;
 
 /**
  * 1. Школьник, содержащий следующие свойства:
@@ -15,6 +15,17 @@ public abstract class Student {
     private int mark;
     private int classNumber;
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getMark() {
+        return this.mark;
+    }
+
+    public int getClassNumber() {
+        return this.classNumber;
+    }
 
     public Student(String name, int mark, int classNumber) {
         this.name = name;
@@ -22,7 +33,11 @@ public abstract class Student {
         this.classNumber = classNumber;
     }
 
-    public abstract void play();
     public abstract void study();
 
+    @Override
+    public String toString() {
+        return String.format("Student: %s, mark: %d, class: %d",
+                this.getName(), this.getMark(), this.getClassNumber());
+    }
 }
